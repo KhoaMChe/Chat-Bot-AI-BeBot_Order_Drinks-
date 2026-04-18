@@ -1,0 +1,17 @@
+python-telegram-bot==20.7
+httpx==0.25.2
+groq
+pandas
+flask
+dotenv
+os
+re
+json
+requests
+time
+hashlib
+hmac
+telegram
+telegram.ext
+utils_qr
+db
