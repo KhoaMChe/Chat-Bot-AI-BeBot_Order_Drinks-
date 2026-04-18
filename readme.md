@@ -1,6 +1,6 @@
-# 🤖 Telegram Order Bot (PayOS Integration)
+# Telegram Order Bot (PayOS Integration)
 
-## 🚀 Giới thiệu
+## Giới thiệu
 
 Đây là một chatbot Telegram hỗ trợ:
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 🧠 Flow hoạt động
+## Flow hoạt động
 
 1. Khách nhắn:
 
