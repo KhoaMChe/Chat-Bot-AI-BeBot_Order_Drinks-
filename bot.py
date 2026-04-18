@@ -1,8 +1,6 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
-# from utils_qr import generate_qr_image
 import qrcode
-# import urllib.parse
 import json
 import qrcode
 from io import BytesIO

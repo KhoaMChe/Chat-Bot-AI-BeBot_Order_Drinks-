@@ -160,54 +160,6 @@ def calculate_total(order):
 # ==============================
 # 💾 LƯU ĐƠN
 # ==============================
-# def save_order(content, total):
-#     conn = get_conn()
-#     c = conn.cursor()
-
-#     c.execute(
-#         "INSERT INTO orders (content, total, status) VALUES (?, ?, ?)",
-#         (content, total, "pending")
-#     )
-
-#     conn.commit()
-#     order_id = c.lastrowid
-#     conn.close()
-
-#     print(f"✅ Saved order {order_id}")
-
-#     return order_id
-# def save_order(content, total, chat_id, name, phone, address):
-#     conn = sqlite3.connect(DB_NAME)
-#     c = conn.cursor()
-
-#     c.execute("""
-#     INSERT INTO orders (content, total, status, chat_id, customer_name, phone, address)
-#     VALUES (?, ?, ?, ?, ?, ?, ?)
-#     """, (content, total, "pending", chat_id, name, phone, address))
-
-#     conn.commit()
-#     order_id = c.lastrowid
-#     conn.close()
-
-#     return order_id
-
-# def save_order(content, total, chat_id, name, phone, address):
-#     conn = get_conn()
-#     c = conn.cursor()
-
-#     created_at = int(time.time())
-
-#     c.execute("""
-#     INSERT INTO orders 
-#     (content, total, status, chat_id, customer_name, phone, address, created_at)
-#     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-#     """, (content, total, "pending", chat_id, name, phone, address, created_at))
-
-#     conn.commit()
-#     order_id = c.lastrowid
-#     conn.close()
-
-#     return order_id
 
 def save_order(content, total, chat_id, name, phone, address):
     conn = get_conn()
