@@ -32,10 +32,10 @@ def webhook():
             if match:
                 order_id = int(match.group(1))
 
-                # 🔥 update status
+                # update status
                 update_order_status(order_id, "paid")
 
-                # 🔥 lấy thông tin order để biết chat_id
+                # lấy thông tin order để biết chat_id
                 order = get_order(order_id)
 
                 if order:

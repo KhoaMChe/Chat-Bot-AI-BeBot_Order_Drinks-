@@ -7,14 +7,14 @@ DB_NAME = "db.sqlite3"
 
 
 # ==============================
-# 🔥 KẾT NỐI DB
+#  KẾT NỐI DB
 # ==============================
 def get_conn():
     return sqlite3.connect(DB_NAME)
 
 
 # ==============================
-# 🔥 TẠO BẢNG
+#  TẠO BẢNG
 # ==============================
 def init_db():
     conn = get_conn()
@@ -53,7 +53,7 @@ def init_db():
 
 
 # ==============================
-# 📥 LOAD CSV → DB
+#  LOAD CSV → DB
 # ==============================
 def load_menu_from_csv(csv_file="menu.csv"):
     try:
@@ -114,7 +114,7 @@ def get_menu_text():
 
 
 # ==============================
-# 💰 TÍNH TIỀN
+#  TÍNH TIỀN
 # ==============================
 def calculate_total(order):
     conn = get_conn()
@@ -158,7 +158,7 @@ def calculate_total(order):
 
 
 # ==============================
-# 💾 LƯU ĐƠN
+#  LƯU ĐƠN
 # ==============================
 
 def save_order(content, total, chat_id, name, phone, address):
@@ -189,7 +189,7 @@ def save_order(content, total, chat_id, name, phone, address):
     return order_id
 
 # ==============================
-# 🔄 UPDATE TRẠNG THÁI
+#  UPDATE TRẠNG THÁI
 # ==============================
 def update_order_status(order_id, status):
     conn = get_conn()
@@ -207,7 +207,7 @@ def update_order_status(order_id, status):
 
 
 # ==============================
-# 🔍 LẤY ĐƠN
+#  LẤY ĐƠN
 # ==============================
 def get_order(order_id):
     conn = get_conn()
@@ -221,7 +221,7 @@ def get_order(order_id):
 
 
 # ==============================
-# 📋 LẤY TẤT CẢ ĐƠN
+#  LẤY TẤT CẢ ĐƠN
 # ==============================
 def get_all_orders():
     conn = get_conn()

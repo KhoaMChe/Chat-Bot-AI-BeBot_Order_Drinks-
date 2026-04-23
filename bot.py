@@ -84,7 +84,7 @@ async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
             total = context.user_data["total"]
             customer = context.user_data["customer"]
 
-            # 🔥 lưu đầy đủ info
+           
             full_data = {
                 "order": order,
                 "customer": customer
@@ -196,57 +196,6 @@ async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data["waiting_info"] = True
 
     await update.message.reply_text(reply)
-
-# async def show_orders(update: Update, context: ContextTypes.DEFAULT_TYPE):
-
-#     # (tuỳ chọn) chặn người lạ
-#     # if update.effective_user.id != OWNER_ID:
-#     #     return
-
-#     conn = sqlite3.connect("db.sqlite3")
-#     c = conn.cursor()
-
-#     c.execute("""
-#         SELECT id, content, total, status, customer_name, phone, address
-#         FROM orders
-#         ORDER BY id DESC
-#         LIMIT 20
-#     """)
-
-#     rows = c.fetchall()
-#     conn.close()
-
-#     text = "📦 DANH SÁCH ĐƠN HÀNG\n\n"
-
-#     for r in rows:
-#         order_id, content, total, status, name, phone, address = r
-
-#         # parse JSON order
-#         try:
-#             items = json.loads(content)["items"]
-
-#         except:
-#             items = []
-
-#         item_text = ""
-#         for i in items:
-#             item_text += f"- {i['item_id']} ({i['size']}) x{i['quantity']}\n"
-
-#         text += f"""
-# 🧾 Order #{order_id}
-# 👤 {name}
-# 📞 {phone}
-# 📍 {address}
-
-# 🛒 Đơn:
-# {item_text}
-# 💰 {total}đ
-# 💳 {status}
-
-# -------------------
-# """
-
-#     await update.message.reply_text(text)
 
 async def show_orders(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
